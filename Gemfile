@@ -24,6 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'pivotal_git_scripts'
 gem 'devise'
+gem 'rest-client'
 
 gem 'remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
@@ -44,7 +45,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'faker'
+  gem 'dotenv-rails'
+  gem 'rspec-rails'
 end
 
 group :development do

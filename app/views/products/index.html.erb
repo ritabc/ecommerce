@@ -8,3 +8,7 @@
 		<%= f.submit "Add to cart" %>
 	<% end %></p>
 <% end %>
+
+<% @nyt_json.each do |showbook| %>
+<p> <%= showbook["title"] %>, <%= showbook["author"] %>, <%= showbook["publisher"] %></p>
+<% end %>
