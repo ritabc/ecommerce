@@ -1,7 +1,10 @@
 <h1>Products#index</h1>
 
-<% if current_user.nil? %>
-	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
-<% else %>
-	<%= link_to products_path, class: 'login-button' do %>Go to App<% end %>
+<% @products.each do |product| %>
+<p><%= product.item %> | <%= number_to_currency product.price %>
+	<%= form_for @order_item do |f| %>
+		<%= f.hidden_field :product_id, value: product.id %>
+		<%= f.number_field :quantity %>
+		<%= f.submit "Add to cart" %>
+	<% end %></p>
 <% end %>
