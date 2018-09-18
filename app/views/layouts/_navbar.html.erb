@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light">
+  <span class="navbar-text">
+    <h2>Book Shop</h2>
+  </span>
+  <span class="navbar-text">
+    <h3><%= link_to "Home", root_path %></h3>
+  </span>
+  <span class="navbar-text">
+    <% if current_user %>
+      <h3><%= current_user.email %> | <%= link_to('Logout', destroy_user_session_path, method: :delete) %></h3>
+    <% else %>
+      <h3><%= link_to "Sign up", new_user_registration_path %> | <%= link_to "Sign in", new_user_session_path %></h3>
+    <% end %>
+  </span>
+</nav>
