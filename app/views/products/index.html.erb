@@ -1,5 +1,9 @@
 <h1>Products#index</h1>
 
+<% if current_user && current_user.admin_role? %>
+	<p>Admin Functionality, only visible to admins</p>
+<% end %>
+
 <% @products.each do |product| %>
 <p><%= product.item %> | <%= number_to_currency product.price %>
 	<%= form_for @order_item do |f| %>

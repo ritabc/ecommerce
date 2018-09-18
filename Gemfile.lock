@@ -54,6 +54,7 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
+    cancancan (2.2.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -275,6 +276,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.7)
   byebug
+  cancancan (~> 2.0)
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
@@ -297,6 +299,7 @@ DEPENDENCIES
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
+  warden
   web-console (>= 3.3.0)
 
 RUBY VERSION
