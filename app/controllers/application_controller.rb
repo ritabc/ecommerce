@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  # load_and_authorize_resource
   protect_from_forgery with: :exception
   helper_method :current_order
   before_action :authenticate_user!
@@ -11,4 +12,5 @@ class ApplicationController < ActionController::Base
       Order.new
     end
   end
+
 end
