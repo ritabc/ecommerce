@@ -1,15 +1,15 @@
-<h1>Products#index</h1>
+<h1>Products</h1>
 
-<% if current_user && current_user.admin_role? %>
+<!-- <% if current_user && current_user.admin_role? %>
 	<p>Admin Functionality, only visible to admins</p>
-<% end %>
+<% end %> -->
 
 <% @products.each do |product| %>
 <p><%= product.item %> | <%= number_to_currency product.price %>
 	<%= form_for @order_item do |f| %>
 		<%= f.hidden_field :product_id, value: product.id %>
 		<%= f.number_field :quantity %>
-		<%= f.submit "Add to cart" %>
+		<span class="cart_ttl"><%= f.submit "Add to cart" %></span>
 	<% end %></p>
 <% end %>
 
