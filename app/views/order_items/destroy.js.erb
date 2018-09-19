@@ -1,2 +1,3 @@
 $('#cart_item_<%= @item.id %>').hide()
-$('.cart-quantity').text('<%= cart_quantity %>')
+$('.cart-quantity').text('<%= cart_values[0] %>')
+$('.cart-price').text('<%= cart_values[1] %>')

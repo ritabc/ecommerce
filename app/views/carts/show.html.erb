@@ -9,8 +9,8 @@
       <hr>
     </div>
   <% end %>
-  <p>Number of items total: <span class="cart-quantity"><%= cart_quantity %></span></p>
-  <p>Your Total: <%= number_to_currency current_order.total_price %></p>
+  <p>Number of items total: <span class="cart-quantity"><%= cart_values[0] %></span></p>
+  <p>Your Total: <span class="cart-price"><%= number_to_currency cart_values[1] %></span></p>
 <% else %>
   <p>Your shopping cart is empty.</p>
 <% end %>
