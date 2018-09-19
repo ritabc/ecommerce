@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
     JSON.parse(@nyt.get_list)["results"]["books"].each do |book|
       @nyt_json.push(book)
     end
-    # @current_user = current_user
   end
 
   def show
